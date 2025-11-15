@@ -6,7 +6,8 @@ import pandas as pd
 import os
 
 # --- Configuration ---
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/predict_churn")
+# When deployed together, FastAPI runs on port 8000, Streamlit on $PORT
+API_URL = os.getenv("API_URL", "http://localhost:8000/predict_churn")
 st.set_page_config(layout="wide", page_title="AI Customer Churn Action System")
 
 # --- Default Customer Data for Demo ---
